@@ -1,14 +1,827 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello Alike!</h1>
-    <h2>Hello Alike!</h2>
-    <h3>Hello Alike!</h3>
-    
-
-</body>
-</html>
+<h2><span style="font-size:16pt;">&nbsp; &nbsp;1) &nbsp;Insider Community:</span></h2>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">The insider community is shown on home page of alike.io.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Insider community code configuration in&nbsp;</span><strong><span style="font-size:12pt;">App/Code/Nik/InsiderPageGraphQl.</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Here etc/schema.graphqls file in set insider community block.insiderCommunity&nbsp;</span><span style="font-size:11pt;">It is a Query, and&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">Nik\\InsiderPageGraphQl\\Model\\Resolver\\InsiderCommunity&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">is</span><span style="font-size:12pt;">&nbsp;a resolver.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">In the resolver file return data like id, name,profile_picture etc using insiderId.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">In the admin panel&nbsp;</span><strong><span style="font-size:12pt;">STORE-&gt;Configuration-&gt;CUSTOM-&gt;Insider-&gt;Home Page Configuration</span></strong><span style="font-size:12pt;">&nbsp;set the&nbsp;</span><span style="color:#303030;background-color:#ffffff;font-size:12pt;">Insider Community text field. here admin set a coma separating insider&rsquo;s ID and showed it in insider community.</span></p>
+    </li>
+</ul>
+<p><span style="color:#303030;background-color:#ffffff;font-size:12pt;">&nbsp; &nbsp;</span></p>
+<p><br></p>
+<h2><span style="font-size:16pt;">&nbsp;2)&nbsp;</span><strong><span style="font-size:16pt;">Explore Cities Nearby</span></strong></h2>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <h2><span style="color:#303030;background-color:#ffffff;font-size:12pt;">Explore Cities Nearby is shown on&nbsp;</span><a href="https://alike.io/cities/"><u><span style="color:#1155cc;background-color:#ffffff;font-size:12pt;">https://alike.io/cities/</span></u></a><span style="color:#303030;background-color:#ffffff;font-size:12pt;">&nbsp;page.</span></h2>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Explore cities nearby code configuration in&nbsp;</span><strong><span style="color:#172b4d;background-color:#ffffff;font-size:12pt;">app/code/Nik/Cities/</span></strong><span style="color:#172b4d;background-color:#ffffff;font-size:12pt;">etc/schema.graphqls.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#172b4d;font-size:12pt;">
+        <p><span style="color:#172b4d;background-color:#ffffff;font-size:12pt;">Here&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">CategoryInterface</span><span style="background-color:#ffffff;font-size:12pt;">&nbsp;in&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">Citycustom query for this block.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;color:#172b4d;font-size:12pt;">
+                    <p><span style="color:#172b4d;background-color:#ffffff;font-size:12pt;">&nbsp;Nik\\Cities\\Model\\Resolver\\CityCustom</span><span style="color:#172b4d;background-color:#ffffff;font-size:12pt;">&nbsp;is the resolver for city custom.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;color:#172b4d;font-size:12pt;">
+        <p><span style="color:#172b4d;background-color:#ffffff;font-size:12pt;">Admin panel in&nbsp;</span><strong><span style="color:#172b4d;background-color:#ffffff;font-size:12pt;">Catalog-&gt;Category-&gt;Content-&gt;Explore Nearby</span></strong><span style="color:#172b4d;background-color:#ffffff;font-size:12pt;">&nbsp;</span><span style="color:#303030;background-color:#ffffff;font-size:12pt;">Here admin set a coma separated city&rsquo;s ID and showed it in Explore Cities Nearby.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#172b4d;font-size:12pt;">
+        <p><span style="color:#172b4d;background-color:#ffffff;font-size:12pt;">In the resolver file return data name, image, and highlights load by Explore Nearby cities id.</span></p>
+    </li>
+</ul>
+<p><br></p>
+<p><br></p>
+<h2><span style="font-size:16pt;">&nbsp; 3) BlackFriday phse1</span></h2>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">The Black Friday sale is shown on&nbsp;</span><a href="https://alike.io/black-friday"><u><span style="color:#1155cc;font-size:12pt;">https://alike.io/black-friday</span></u></a><span style="font-size:12pt;">&nbsp;page.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Black Friday Sale in three phases.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">StoreConfig GraphQl uses BlackFriday reserve price and SKU.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">passHotel and passProduct GraphQl use and items Query to retrieve data.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">StoreConfig GraphQl is located at the&nbsp;</span><strong><span style="font-size:12pt;">app/code/NaS/Ticket&nbsp;</span></strong><span style="font-size:12pt;">module.&nbsp;</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">We are code configured in&nbsp;</span><strong><span style="color:#172b4d;background-color:#ffffff;font-size:12pt;">app/code/Nik/Sendinblue/etc/schema.graphqls.</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;color:#172b4d;font-size:12pt;">
+        <p><span style="color:#172b4d;background-color:#ffffff;font-size:12pt;">In schema.graphql file sent mutation&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">subscribeToBlackFridayPhase</span></strong><span style="background-color:#ffffff;font-size:12pt;">.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Here set the black friday phase and input like name,first_name, and email.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">\\Nik\\Sendinblue\\Model\\Resolver\\SubscribeToBlackFriday&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">is a resolver file for BlackFriday.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In resolver get data by $params and set id by scopConfig.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Admin panel in STORE-&gt;Configuration-&gt;CUSTOM-&gt;Sendinblue-&gt;Brevo Lists Settings in set template for BlackFriday.</span></p>
+    </li>
+    <li style="list-style-type:disc;color:#172b4d;font-size:12pt;">
+        <p><span style="color:#172b4d;background-color:#ffffff;font-size:12pt;">BlackFriday Phase 1&amp;2 consists text field for set templates for phases. here set the brevo email template ID.</span></p>
+    </li>
+</ul>
+<p><br></p>
+<p><br></p>
+<p><span style="font-size:15pt;">&nbsp; &nbsp; 4)&nbsp;</span><strong><span style="font-size:15pt;">Currency GraphQL</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Currency GraphQL use for setup currency in website.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Currency GraphQl is located at&nbsp;</span><strong><span style="font-size:12pt;">app/code/Magefan/AutoCurrencySwitcher.</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="font-size:12pt;">STORE-&gt;Congiguration-&gt;GENERAL-&gt;Currency Setup</span></strong><span style="font-size:12pt;">&nbsp;to set currency and configuration on it.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">\\Magefan\\AutoCurrencySwitcher\\Model\\Resolver\\Currency&nbsp;</span><span style="font-size:12pt;">resolver use for currency.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+</ul>
+<p><br></p>
+<p><strong><span style="font-size:15pt;">&nbsp; &nbsp;5) VirtualProduct GraphQL</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">New_product GraphQL call in home page for Best Selling Experiences.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">new_producy GraphQL config in&nbsp;</span><strong><span style="font-size:12pt;">app/code/Nik/CatalogGraphQl</span></strong><span style="font-size:12pt;">.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Here Product interface uses and return data by ID.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\NewProducts</span></strong><span style="font-size:12pt;">&nbsp;resolver for return data.</span></p>
+    </li>
+</ul>
+<p><br></p>
+<p><strong><span style="font-size:12pt;">&nbsp; &nbsp;</span></strong><strong><span style="font-size:15pt;">6)</span></strong><strong><span style="font-size:12pt;">&nbsp;</span></strong><strong><span style="background-color:#ffffff;font-size:15pt;">PreviewProducts&nbsp;</span></strong><strong><span style="font-size:15pt;">GraphQL</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">homepage_stories_products GraphQL is used for Handcrafted Holiday Packages.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Handcrafted Holiday Packages are located on home page.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Thair are&nbsp;</span><strong><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\HomepageStoriesProducts&nbsp;</span></strong><span style="font-size:12pt;">resolver in set page size.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">There are all products in set sort order and this sort order field uses filter homepage_stories product.&nbsp;</span></p>
+    </li>
+</ul>
+<p><br></p>
+<p><br></p>
+<p><strong><span style="font-size:15pt;">&nbsp; &nbsp;7) Cart GraphQL</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Cart GraphQL use for&nbsp;</span><a href="https://alike.io/cart"><u><span style="color:#1155cc;font-size:12pt;">https://alike.io/cart</span></u></a><span style="font-size:12pt;">&nbsp; page.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">AvailablePaymentMethod grapgQl use in cart page.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">This graphQl located at&nbsp;</span><strong><span style="font-size:12pt;">app/code/Nik/CheckoutGraphQl&nbsp;</span></strong><span style="font-size:12pt;">module.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="font-size:12pt;">customInfo</span></strong><span style="font-size:12pt;">&nbsp;GraphQl also use in cart page.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">customInfo&nbsp;</span><span style="font-size:12pt;">GraphQl set in OrderInterface,and CartItemsInterface.</span><span style="font-size:12pt;">Nik\\CheckoutGraphQl\\Model\\Resolver\\OrderCustomOptions&nbsp;</span><span style="font-size:12pt;">resolver use for orderintrface and&nbsp;</span><span style="font-size:12pt;">Nik\\CheckoutGraphQl\\Model\\Resolver\\CustomOptions&nbsp;</span><span style="font-size:12pt;">resolver use for CartItemsI.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">In&nbsp;</span><strong><span style="font-size:12pt;">app/code/Nik/CheckoutGraphQl&nbsp;</span></strong><span style="font-size:12pt;">module use for CustomInfo GraphQl.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">Nik\\CheckoutGraphQl\\Model\\Resolver\\OrderCustomOptions&nbsp;</span><span style="font-size:12pt;">resolver is used to retrieve data.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="font-size:12pt;">addHotelXProductToCart</span></strong><span style="font-size:12pt;">&nbsp;mutation use for after we select hotel rooms.&nbsp;</span><strong><span style="font-size:12pt;">NaS\\Travelgatex\\Model\\Resolver\\AddHotelXProductsToCart</span></strong><span style="font-size:12pt;">&nbsp;it is a resolver use.&nbsp;</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Payment method, Shipping method, coupon, etc configure in this graphql.</span></p>
+    </li>
+</ul>
+<p><br></p>
+<p><br></p>
+<p><strong><span style="background-color:#ffffff;font-size:15pt;">&nbsp; &nbsp;8)Cities page</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In cities, pages are located at&nbsp;</span><a href="https://alike.io/cities/"><u><span style="color:#1155cc;background-color:#ffffff;font-size:12pt;">https://alike.io/cities/</span></u></a><span style="background-color:#ffffff;font-size:12pt;">.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">All Cities are one type of category in alike.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In code configuration&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/Cities</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;use.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">custom&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">graphql use for city custom.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">It is located at&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/Cities</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;vendor.</span><strong><span style="background-color:#ffffff;font-size:12pt;">Nik\\Cities\\Model\\Resolver\\CityCustom&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">resolver use to return data.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Citycustom, Explore Nearby, and Faq also use the city page.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Also, Top Attractions handcrafted holidays block is used on this page.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">StoriesProducts &amp; ActivitiesProducts GraphQL call from&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/NaS/Widgets&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">module.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">CityFaqs is located in the&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/Faqs</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;module.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">CityCurrency, BestTimeToVisit, MonthsWeather set in category interface.&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/CataloggraphQl&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">module.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="font-size:12pt;">get_peoduct&nbsp;</span></strong><span style="font-size:12pt;">mutation to use retrieve product by input parameter.</span><strong><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Booking\\RaynaProduct</span></strong><span style="font-size:12pt;">&nbsp;that is a resolver use.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">getRaynaTickets&nbsp;</span><span style="font-size:12pt;">is query to using rayna api thru return and book ticket and&nbsp;</span><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Booking\\RaynaTickets&nbsp;</span><span style="font-size:12pt;">is a resolver to use.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="font-size:12pt;">getRaynaTicketsSlot&nbsp;</span></strong><span style="font-size:12pt;">using this query book slot by date.</span><strong><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Booking\\RaynaTicketSlot</span></strong><span style="font-size:12pt;">&nbsp;it is a resolver using rayna api key to fetch and book ticket.</span></p>
+    </li>
+</ul>
+<p><br></p>
+<p><strong><span style="background-color:#ffffff;font-size:15pt;">&nbsp; &nbsp; 9) Product Interface</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Product Interface used for retrieving data from product and it&rsquo;s attribute.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><a href="https://alike.io/products"><u><span style="color:#1155cc;background-color:#ffffff;font-size:12pt;">https://alike.io/products</span></u></a><span style="background-color:#ffffff;font-size:12pt;">&nbsp;page in using &nbsp;product interface to return data.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">It&rsquo;s located at&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/CataloggraphQl&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">module.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In garphql &ldquo;items&rdquo; denoted as a one product to return from product interface.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">adult_lable&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">is custom field to add in interface.it resolver is&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\AdultLabel.</span></p>
+                </li>
+            </ul>
+        </strong><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">api_connected_label &nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">is return api connected name.and it is use&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">&nbsp; &nbsp;&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\ApiLabel</span><span style="background-color:#ffffff;font-size:12pt;">&nbsp;resolver.api connected is a one type of attribute to add from admin panel and api_connected_label return name of attribute.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="background-color:#ffffff;font-size:12pt;">dynamicAttribute</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;field to add product interface&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/DynamicAttributes</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;module.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">\\Nik\\DynamicAttributesGraphql\\Model\\Resolver\\Product\\DynamicAttributes&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">resolver use to return data.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="background-color:#ffffff;font-size:12pt;">dynamicAttribute&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">return data in array foam. It is a one type of collection of some attribute.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">GlobaltixAvailability&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">query also use in product interface.</span></p>
+                </li>
+            </ul>
+        </strong><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\GlobaltixAvailability</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">That resolver use to retrieve data. Using globlatixFactory in which id is active that return product.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="font-size:12pt;">hide_adult, hide_child, hide_infant&nbsp;</span></strong><span style="font-size:12pt;">are attributes to set in store-&gt;product attribute.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">&nbsp;</span><strong><span style="font-size:12pt;">include_in_touristors&nbsp;</span></strong><span style="font-size:12pt;">&nbsp;is a custom attribute to add in product interface.here&nbsp;</span><strong><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\IncludedTouristors&nbsp;</span></strong><span style="font-size:12pt;">resolver use.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">included_trips&nbsp;</span><span style="font-size:12pt;">attribute</span><span style="font-size:12pt;">&nbsp;</span><span style="font-size:12pt;">to</span><span style="font-size:12pt;">&nbsp;</span><span style="font-size:12pt;">add in product interface and&nbsp;</span><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\IncludedTrips</span><span style="font-size:12pt;">&nbsp;is a resolver use.in resolver file fetch data from product attribute.</span></p>
+                </li>
+            </ul>
+        </strong><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">kit_avability&nbsp;</span><span style="font-size:12pt;">add in interface and&nbsp;</span><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\KitAvailability&nbsp;</span><span style="font-size:12pt;">resolver use. In resolver get data to fetching kit API and return those data to come from kit API.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="font-size:12pt;">strike_price_value&nbsp;</span></strong><span style="font-size:12pt;">&nbsp;is set in product interface and Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\StrikePrice is a resolver.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="font-size:12pt;">rayna_city_id, rayna_contract_id, rayna_country_id, rayna_ id&nbsp;</span></strong><span style="font-size:12pt;">thru return city to &lsquo;city&rsquo;,&rsquo;rayna_contract_id&rsquo;, &lsquo;rayna_country_id&rsquo; and &lsquo;rayna_id&rsquo;attributes.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="font-size:12pt;">sort_discription_alike</span></strong><span style="font-size:12pt;">&nbsp;input parameter to input description when create a trip story.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="font-size:12pt;">strike_price_value</span></strong><span style="font-size:12pt;">&nbsp;set in product interface and&nbsp;</span><strong><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\StrikePrice&nbsp;</span></strong><span style="font-size:12pt;">is a resolver to use.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="font-size:12pt;">touristor_saver&nbsp;</span></strong><span style="font-size:12pt;">also add-in product interface and&nbsp;</span><strong><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\TouristorSaver</span></strong><span style="font-size:12pt;">&nbsp;is a resolver.it return data from tourister.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="font-size:12pt;">url_key&nbsp;</span></strong><span style="font-size:12pt;">is set in touristor_saver query, and&nbsp;</span><strong><span style="font-size:12pt;">&nbsp; &nbsp;&nbsp;</span></strong><strong><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\Tourist</span></strong><span style="font-size:12pt;">&nbsp;use this resolver.here retrieve url_key from product factory. &nbsp; &nbsp;</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">ins_city&nbsp;</span><span style="font-size:12pt;">attribute is set from admin product attribute and config from&nbsp;</span><span style="font-size:12pt;">app/code/Nik/CatalogGraphQl&nbsp;</span><span style="font-size:12pt;">module.</span><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\InsCustomAttributes</span><span style="font-size:12pt;">&nbsp;resolver to use.&nbsp;</span></p>
+                </li>
+            </ul>
+        </strong><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">is_liked&nbsp;</span><span style="font-size:12pt;">also set in product attribute and&nbsp;</span><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\IsLiked</span><span style="font-size:12pt;">&nbsp;is a resolver to use.</span><span style="font-size:12pt;">&nbsp;</span></p>
+                </li>
+            </ul>
+        </strong><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">page_info and total_count&nbsp;</span><span style="font-size:12pt;">is use in ProductComment query in cataloggraphql schema.graphql file.</span></p>
+                </li>
+            </ul>
+        </strong><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">base_vedio&nbsp;</span><span style="font-size:12pt;">use in trip story page and code configuration in catalaoggaraphql schema.graphql file.</span><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\BaseVideo</span><span style="font-size:12pt;">&nbsp;it is a resolver use for base_vedio query.</span></p>
+                </li>
+            </ul>
+        </strong><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">icons&nbsp;</span><span style="font-size:12pt;">is set in product attribute and&nbsp;</span><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\HeaderIcons&nbsp;</span><span style="font-size:12pt;">resolver to use get icon.</span></p>
+                </li>
+            </ul>
+        </strong><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">ins_days&nbsp;</span><span style="font-size:12pt;">is a filter input to add in preview_product query.</span><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\PreviewProducts&nbsp;</span><span style="font-size:12pt;">in this resolver to return data from collectionFactory.</span></p>
+                </li>
+            </ul>
+        </strong><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">Ins_highlights&nbsp;</span><span style="font-size:12pt;">is add in product interface and&nbsp;</span><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\InsHighlights&nbsp;</span><span style="font-size:12pt;">resolver use to return highlights.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Highlights is from admin panel CONTENT-&gt;Cities-&gt;City Highlights Listing.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">insider_data&nbsp;</span><span style="font-size:12pt;">set in product interface and&nbsp;</span><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\ProductInsider&nbsp;</span><span style="font-size:12pt;">it is a resolver use.here fetch data from insiderFactory.</span></p>
+                </li>
+            </ul>
+        </strong><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">itinerary&nbsp;</span><span style="font-size:12pt;">is a added in product graphql and&nbsp;</span><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\Itinerary&nbsp;</span><span style="font-size:12pt;">that is a resolver.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="font-size:12pt;">product_like&nbsp;</span></strong><span style="font-size:12pt;">is a product interface and&nbsp;</span><strong><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\ProductLikeAttribute&nbsp;</span></strong><span style="font-size:12pt;">it&rsquo;s a resolver use.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="font-size:12pt;">story_type&nbsp;</span></strong><span style="font-size:12pt;">is product interface parameter and&nbsp;</span><strong><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\ProductStoryType&nbsp;</span></strong><span style="font-size:12pt;">is a resolver.&nbsp;</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">product_comment&nbsp;</span><span style="font-size:12pt;">is a product interface use and&nbsp;</span><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\ProductComment&nbsp;</span><span style="font-size:12pt;">it&rsquo;s a resolver.</span></p>
+                </li>
+            </ul>
+        </strong><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">getProduct&nbsp;</span><span style="font-size:12pt;">add in product interface and&nbsp;</span><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Booking\\RaynaProduct</span><span style="font-size:12pt;">&nbsp;is a resolver to use.in resolver return data using kit API.</span></p>
+                </li>
+            </ul>
+        </strong><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">insiderTickets&nbsp;</span><span style="font-size:12pt;">mutation add in product interface, when we select trip story at that time use this mutation and&nbsp;</span><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Booking\\InsiderTi</span><span style="font-size:12pt;">&nbsp;this resolver file use for retrieve the data.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Also&nbsp;</span><strong><span style="font-size:12pt;">itineraryPrice&nbsp;</span></strong><span style="font-size:12pt;">mutation add and&nbsp;</span><strong><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Booking\\ItineraryPrice&nbsp;</span></strong><span style="font-size:12pt;">this resolver use.</span></p>
+    </li>
+</ul>
+<p><br></p>
+<p><strong><span style="font-size:15pt;">&nbsp; &nbsp; &nbsp;10)Travel Passes Page</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">&nbsp;Travell passes are comes from &nbsp;</span><a href="https://alike.io/travel-passes?utm_source=site&utm_medium=menu-desktop&utm_campaign=menu"><u><span style="color:#1155cc;font-size:12pt;">https://alike.io/travel-passes?utm_source=site&amp;utm_medium=menu-desktop&amp;utm_campaign=menu</span></u></a><span style="font-size:12pt;">.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">In this page use categories interface and return data.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Category interface is located at&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/CataloggraphQl.</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Travel passes as a product attribute to add in admin STORE-&gt;Attribute-&gt;Product.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Esim&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">is a resolver to set and get data.in this resolver set page size and add filter as a attribute and return data.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+</ul>
+<p><span style="background-color:#ffffff;font-size:12pt;">&nbsp; &nbsp; &nbsp;</span><strong><span style="background-color:#ffffff;font-size:17pt;">&rarr;</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;If we can click any passes so move to &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><a href="https://alike.io/products/the-london-passr"><u><span style="color:#1155cc;background-color:#ffffff;font-size:12pt;">https://alike.io/products/the-london-passr</span></u></a><span style="background-color:#ffffff;font-size:12pt;">&nbsp;page.</span></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Also, this page uses a product interface.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Musement api thru select date for ticket and book ticket.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Booking\\MusementTickets&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">is resolver to fetch live ticket data.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Musement Api configuration in Admin&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">STORE-&gt;Configuration-&gt;NAS-&gt;Musement</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;API path.&nbsp;</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Musement activity configuration in&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/CatalogGraphQl/etc/schema.graphqls.</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="background-color:#ffffff;font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Booking\\MusementActivity&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">is musement activity resolver.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In this code fetches Musement activity data based on GraphQL input parameters and handles exceptions during the process and booking_type and order_box is a input parameters of musement activity.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Musement tickets configuration in&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/CatalogGraphQl/etc/schema.graphqls.</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="background-color:#ffffff;font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Booking\\MusementTickets&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">is resolver of musement ticket.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In musement tickets resolver fetches Musement ticket data, retrieves associated product information, processes the data, adjusts prices based on certain parameters.</span></p>
+    </li>
+</ul>
+<p><br></p>
+<p><br></p>
+<p><strong><span style="background-color:#ffffff;font-size:15pt;">&nbsp; &nbsp;11) eSIMs Page</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><a href="https://alike.io/esims?utm_source=site&utm_medium=menu-desktop&utm_campaign=menu"><u><span style="color:#1155cc;background-color:#ffffff;font-size:12pt;">https://alike.io/esims?utm_source=site&amp;utm_medium=menu-desktop&amp;utm_campaign=menu</span></u></a><span style="background-color:#ffffff;font-size:12pt;">&nbsp;url for eSIMs page.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Here Category use as a filter. And call category interface for category.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Also, Product as an eSIMs and use ProductInterface are located in&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/CataloggraphQl.&nbsp;</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">For eSIMs product use&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Esim</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;resolver.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Set E SIM attribute set and use in resolver to filter products for eSIMs.</span></p>
+    </li>
+</ul>
+<p><br></p>
+<p><br></p>
+<p><strong><span style="background-color:#ffffff;font-size:15pt;">&nbsp; &nbsp; 12) Winter Sale</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">The Winter Sale page URL is&nbsp;</span><a href="https://alike.io/winter-sale?utm_source=site&utm_medium=menu-desktop&utm_campaign=menu"><u><span style="color:#1155cc;background-color:#ffffff;font-size:12pt;">https://alike.io/winter-sale?utm_source=site&amp;utm_medium=menu-desktop&amp;utm_campaign=menu</span></u></a><span style="background-color:#ffffff;font-size:12pt;">.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In winter sale use product interface to retrieve product.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Here winter sale is only for Dubai.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">storeConfig GraphQl use in wintersale and it&rsquo;s located at&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/NaS/Ticket&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">module.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Here is another GraphQL use for Attraction Bundle&nbsp;</span><u><span style="background-color:#ffffff;font-size:12pt;">passProduct.</span></u></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">passProduct query located at&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/NaS/Ticket&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">module.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">NaS\\Ticket\\Model\\Resolver\\PassProducts&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">resolver file to use.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">passHotel GraphQL used for Hotel.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">NaS\\Ticket\\Model\\Resolver\\PassHotel&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">resolver to use return hotel data.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In this resolver using collectionfacteory to retrieve hotel and return data.</span></p>
+    </li>
+</ul>
+<p><br></p>
+<p><strong><span style="background-color:#ffffff;font-size:15pt;">13) Cart Page</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">When we add product to cart then reach&nbsp;</span><a href="https://uat.alike.host/cart"><u><span style="color:#1155cc;background-color:#ffffff;font-size:12pt;">https://uat.alike.host/cart</span></u></a><span style="background-color:#ffffff;font-size:12pt;">&nbsp;page.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In this page addProductToCart GraphQL call.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">This GraphQL use in&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/CataloggraphQl&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">module.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Booking\\AddProductToCart&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">resolver use for this GraphQL.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In this resolver get items in cart and configuration on it.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Then we can continue to next step setShippingAddressesOnCart GraphQL call.&nbsp;</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">After the next step add our details between contact detail and payment option step to call abandonedCartCapture GraphQL call.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">abandonedCartCapture GraphQL at&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/AbandonedCartCapture</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;module.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">Nik\\AbandonedGraphQl\\Model\\Resolver\\AbandonedCartCapture&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">resolver use.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Abandoned report configuration in Admin panel REPORTING-&gt;Anamdoned-&gt;Reports.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Abandoned email configuration on STORE-&gt;Configuration-&gt;CUSTOM-&gt;Abandoned in Admin panel.</span></p>
+    </li>
+</ul>
+<p><span style="background-color:#ffffff;font-size:12pt;">&nbsp;</span></p>
+<p><br></p>
+<p><strong><span style="background-color:#ffffff;font-size:15pt;">&nbsp; &nbsp; &nbsp; &nbsp;14) Signup/Signin Page</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">&nbsp;Signin page URL is&nbsp;</span><a href="https://app.alike.io/#/signin"><u><span style="color:#1155cc;background-color:#ffffff;font-size:12pt;">https://app.alike.io/#/signin</span></u></a><span style="background-color:#ffffff;font-size:12pt;">.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">amSocialLoginButtonConfig GraphQL used through work signup/sign-in.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">amSocialLoginButtonConfig GraphQL is located at&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Amasty/SocialLoginGraphQl module.</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="background-color:#ffffff;font-size:12pt;">Amasty\\SocialLoginGraphQl\\Model\\Resolver\\SocialButtons</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;is resolver of&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">amSocialLoginButtonConfig.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In resolver (</span><strong><span style="background-color:#ffffff;font-size:12pt;">SocialButtons</span></strong><span style="background-color:#ffffff;font-size:12pt;">) that retrieves information about enabled social login buttons using the&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">SocialData</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;model from the Amasty Social Login extension for Magento 2.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Then user creates a successfully after-call createCustomerv2 GraphQL</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/Cities&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">module use for create customer.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="background-color:#ffffff;font-size:12pt;">\\Nik\\Cities\\Model\\Resolver\\Insider\\CreateCustomer&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">resolver used for creating customer.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><a href="https://app.alike.host/#/account/general"><u><span style="color:#1155cc;background-color:#ffffff;font-size:12pt;">https://app.alike.host/#/account/general</span></u></a><span style="background-color:#ffffff;font-size:12pt;">&nbsp;after signin as a user reach this page.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><a href="https://app.alike.host/#/my-trips/my-bookings/upcoming-order"><u><span style="color:#1155cc;background-color:#ffffff;font-size:12pt;">https://app.alike.host/#/my-trips/my-bookings/upcoming-order</span></u></a><span style="background-color:#ffffff;font-size:12pt;">&nbsp;in this page customer order graphql call&nbsp;</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Customer graphql is located at&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/SalesGraphQL</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;module.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="background-color:#ffffff;font-size:12pt;">Magento\\SalesGraphQl\\Model\\Resolver\\CustomerOrders&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">resolver use for customer order.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In this resolver filter and get data using ExtensionAttribute.</span></p>
+    </li>
+</ul>
+<p><br></p>
+<p><br></p>
+<p><strong><span style="background-color:#ffffff;font-size:15pt;">&nbsp; 15) Become Insider&nbsp;</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In the customer login page, we create also insider account.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><a href="https://app.alike.host/#/my-studio/dashboard"><u><span style="color:#1155cc;background-color:#ffffff;font-size:12pt;">https://app.alike.host/#/my-studio/dashboard</span></u></a><span style="background-color:#ffffff;font-size:12pt;">&nbsp;is a become insider page URL.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In this page BecomeInsider GraphQL call.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">BecomeInsider GraphQL is located at&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/Cities&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">module.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">\\Nik\\Cities\\Model\\Resolver\\Insider\\BecomeInsider&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">in a resolver for create insider account.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">MyDeshboard GraphQL is use for insider&rsquo;s data we can see in dashboard page.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">Nik\\InsidersDashboardGraphQl\\Model\\Resolver\\MyDashboardResolver&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">resolver use for this query.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Get data using insiderFactory.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In Admin panel&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">INSIDERS</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;section for customization insider.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">MyStudioAccount garphql use for customize account.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">MyStudioAccount garphql located at&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/InsidersConfigGraphQL</span></strong><span style="background-color:#ffffff;font-size:12pt;">.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">Nik\\InsidersConfigGraphQl\\Model\\Resolver\\MyStudioAccountResolver&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">resolver use for garaphql.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In admin panel,&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">INSIDERS-&gt;Profile-&gt;Manage Insiders&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">section configure.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">MyTripData GraphQL use for listening trip story. Is located at&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/InsidersDashboardgraphQL</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;module.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Wallet GraphQL for account wallet.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Wallet GraphQl is located at&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/InsidersDashboardgraphQL&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">module.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">And&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">Nik\\Cities\\Model\\Resolver\\Wallets&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">is a resolver.</span></p>
+    </li>
+</ul>
+<p><br></p>
+<p><strong><span style="background-color:#ffffff;font-size:15pt;">&nbsp; &nbsp;16) Hotels &amp; Stays Page</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">SearchX GraphQL is use&nbsp;</span><a href="https://uat.alike.host/hotels"><u><span style="color:#1155cc;background-color:#ffffff;font-size:12pt;">https://uat.alike.host/hotels</span></u></a><span style="background-color:#ffffff;font-size:12pt;">&nbsp;page in search section.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">SearchX GarphQL is located at&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/NaS/Travelgatex</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;module.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Here SearchX GraphQL use for search and&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">NaS\\Travelgatex\\Model\\Resolver\\Search&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">is resolver.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="background-color:#ffffff;font-size:12pt;">NaS\\Travelgatex\\Model\\Resolver\\SearchList&nbsp;</span><span style="background-color:#ffffff;font-size:12pt;">resolver use for SearchListX.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">map &amp; pagination use in&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">Hotel</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;query. Here&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">NaS\\Hotelbeds\\Model\\Resolver\\Hotels&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">is a resolver use.in admin panel data set in STORE-&gt;Configuration-&gt;NaS-&gt;HotelBedsApi in set configuration.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="background-color:#ffffff;font-size:12pt;">quoteX</span></strong><strong><span style="background-color:#ffffff;font-size:15pt;">&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">graphql use in when we select hotel room at that time use.in code configuration set quoteX query and&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">NaS\\Travelgatex\\Model\\Resolver\\Quote</span></strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;it&rsquo;s resolver to use.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In quoteX add hotelX parameter.&nbsp;</span></p>
+    </li>
+</ul>
+<p><strong><span style="font-size:15pt;">17) Product Comment GraphQL</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Product Comment GraphQL in particular product page.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">ProductComment located at&nbsp;</span><strong><span style="font-size:12pt;">app/code/Nik/CatalogGraphQl&nbsp;</span></strong><span style="font-size:12pt;">module.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Product\\ProductComment resolver file to use in this graphql.</span></p>
+    </li>
+</ul>
+<p><br></p>
+<p><strong><span style="font-size:15pt;">18) Insider Account Graphql</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">InsiderAccount GraphQl use in particular insider&rsquo;s page.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">InsiderAccount GraphQl configure in&nbsp;</span><strong><span style="font-size:12pt;">app/code/Nik/insiderPageGraphQl&nbsp;</span></strong><span style="font-size:12pt;">module.</span></p>
+    </li>
+    <li><strong>
+            <ul>
+                <li style="list-style-type:disc;font-size:12pt;">
+                    <p><span style="font-size:12pt;">Nik\\InsiderPageGraphQl\\Model\\Resolver\\InsiderPage</span><span style="font-size:12pt;">&nbsp;resolver use in InsiderAccount graphql.</span></p>
+                </li>
+            </ul>
+        </strong></li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">Following graphql configuration in</span><strong><span style="font-size:12pt;">&nbsp;code/Nik/Cities/etc/schema.graphqls.</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="font-size:12pt;">Nik\\Cities\\Model\\Resolver\\Following&nbsp;</span></strong><span style="font-size:12pt;">is a customer following resolver.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="font-size:12pt;">returns the result with additional details like profile pictures and nicknames. The actual logic for fetching followings is likely implemented in the&nbsp;</span><strong><span style="font-size:12pt;">getFollowings</span></strong><span style="font-size:12pt;">&nbsp;method of the</span><strong><span style="font-size:12pt;">&nbsp;NaS\SocialAddon\Model\ResourceModel\Follow\CollectionFactory&nbsp;</span></strong><span style="font-size:12pt;">class.</span></p>
+    </li>
+</ul>
+<p><br></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Wallets graphql configuration in&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/Cities/etc/schema.graphqls.</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="background-color:#ffffff;font-size:12pt;">Nik\\Cities\\Model\\Resolver\\Wallets&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">is wallets resolver.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">resolver for retrieving information about a user&apos;s wallet transactions and It includes logic for handling authorization, loading credit information, filtering and sorting transactions, and providing pagination details.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">categoryimageid configuration in&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/CatalogGraphQl/etc/schema.graphqls .</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="background-color:#ffffff;font-size:12pt;">&nbsp;Nik\\CatalogGraphQl\\Model\\Resolver\\Story\\CategoryImageIdData&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">is categoryimageid resolver.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">A graphQL resolver that retrieves data about category images based on city attributes. It iterates over the options of the &apos;ins_city&apos; attribute, fetches corresponding category data, and builds an array containing attribute ID, city name, category ID, and category image URL for each category.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Mytrips configuration in&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/InsidersDashboardGraphQl/etc/schema.graphqls.</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="background-color:#ffffff;font-size:12pt;">Nik\\InsidersDashboardGraphQl\\Model\\Resolver\\MyTripsResolver&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">is mytrips resolver.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In resolver for fetching data about trips. It includes methods to handle authorization, retrieve insider and product information, and build a response containing information about top trips with pagination details. The resolver also includes methods to handle image URLs, including placeholders.</span></p>
+    </li>
+</ul>
+<p><br></p>
+<p><strong><span style="background-color:#ffffff;font-size:15pt;">19)categoryinterface:</span></strong></p>
+<ul>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">Categoryinterface return data by items.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">esim_product configuration in&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/CatalogGraphQl/etc/schema.graphqls.</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="background-color:#ffffff;font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Esim&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">is categoryinterface resolver.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">In &nbsp;resolver (Esim) that retrieves data about eSIM products based on various filters. The resolver constructs a product collection, applies filters, and returns relevant information in the output arrayTop_travelpass_products configuration in&nbsp;</span><strong><span style="background-color:#ffffff;font-size:12pt;">app/code/Nik/CatalogGraphQl/etc/schema.graphqls.</span></strong></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><strong><span style="background-color:#ffffff;font-size:12pt;">Nik\\CatalogGraphQl\\Model\\Resolver\\Travelpass&nbsp;</span></strong><span style="background-color:#ffffff;font-size:12pt;">is travelpass resolver.</span></p>
+    </li>
+    <li style="list-style-type:disc;font-size:12pt;">
+        <p><span style="background-color:#ffffff;font-size:12pt;">resolver (</span><strong><span style="background-color:#ffffff;font-size:12pt;">Travelpass</span></strong><span style="background-color:#ffffff;font-size:12pt;">) that retrieves data about top-rated travel passes based on various filters. The resolver constructs a product collection, applies filters, and returns relevant information in the output array.&nbsp;</span></p>
+    </li>
+</ul>
+<p><br></p>
+<p><br></p>
+<p><strong><span style="background-color:#ffffff;font-size:15pt;">&nbsp;</span></strong></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
